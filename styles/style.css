@@ -1,0 +1,1026 @@
+/*
+Filename: style.css
+Author: Gregory Ruta
+Target: index.php, product.php, enquire.php, payment.php, fix_order.php, receipt.php, about.php, enhancements.php, enhancements2.php, enhancements3.php, manager.php, authenticate.php, password_change.php
+Purpose: CSS for Assignment Part 1, 2, 3
+Created: 20/03/2020
+Last Modified: 01/06/2020
+Credits: None
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a {
+	color: inherit;
+	outline: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ol,
+ul {
+	margin-bottom: 1em;
+}
+
+h1 {
+	font-size: 1.6em;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h4 {
+	font-size: 1em;
+	margin-bottom: 0.25em;
+}
+
+h2,
+h3,
+h4 {
+	margin-top: 1em;
+	font-weight: 300;
+}
+
+p,
+ol,
+ul {
+	text-align: justify;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+caption {
+	font-weight: 400;
+	margin-bottom: .5em;
+	text-align: left;
+}
+
+ol,
+ul {
+	margin-left: 2.2em;
+}
+
+ol ol,
+ol ul,
+ul ul,
+ul ol {
+	margin-left: 1.1em;
+}
+
+ul li {
+	list-style-type: disc;
+}
+
+html {
+	background-image: url("images/background_1.jpg");
+	background-repeat: no-repeat;	
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	box-shadow: 0 0 500px 50px inset rgba(0,0,0,0.5);
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: auto;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Header */
+
+header {
+	padding: 15px;
+	position: relative;
+}
+
+/* Logo */
+
+#logo_link {
+	display: block;
+	position: absolute;
+	top: 13px;
+}
+
+#logo {
+	display: block;
+	height: 35px;
+	width: auto;
+}
+
+/* Navigation */
+
+#nav_container {
+	float: right;
+}
+
+#navicon {
+	display: none;
+}
+
+nav {
+	color: white;
+	background-color: transparent;
+}
+
+nav a {
+	display: inline-block;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	padding: 6px 10px;
+	margin-right: 15px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+nav a:last-child {
+	margin-right: auto;
+}
+
+nav a.current {
+	border-color: white;
+	pointer-events: none;
+}
+
+nav a:hover {
+	color: black;
+	background-color: white;
+}
+
+/* Main */
+
+main {
+	max-width: 980px;
+	width: 100%;
+	margin: 0 auto;
+	flex-grow: 1;
+}
+
+/* Article */
+
+article {
+	background-color: white;
+	padding: 4em;
+	border-radius: 10px;
+}
+
+section,
+#article_intro  {
+	margin-bottom: 2em;
+}
+
+article > *:last-child {
+	margin-bottom: 0;
+}
+
+/* Footer */
+
+footer {
+	padding: 5px;
+	color: white;
+	text-shadow: 0px 0px 10px #000000;
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* Footer columns */
+
+.footer_col {
+	width: 33.33%;
+	font-size: .9em;
+}
+.footer_col:nth-child(1) {
+	text-align: center;
+}
+
+.footer_col:nth-child(2) {
+	text-align: right;
+}
+
+/* Page specific - html id="#page_home" - index.php */
+
+#page_home main {
+	padding-top: 5em;
+	text-align: center;
+	color: white;
+}
+
+/* Splash text */
+
+.splash_text {
+	font-weight: 100;
+}
+
+h1.splash_text {
+	font-size: 6em;
+	margin-bottom: 0;
+}
+
+span.splash_text {
+	font-size: 1.5em;
+}
+
+/* Page specific - html id="#page_product" - product.php */
+
+#page_product h1 {
+	font: 300 1.6em Roboto, sans-serif; /* Only here to adhere to instructions */
+}
+
+/* Testimonials (aside) */
+
+#testimonials {
+	float: right;
+	width: 25%;
+	border: 1px solid #151111;
+	padding: 1em;
+	margin-left: 2em;
+	border-radius: 10px;
+	box-sizing: content-box;
+}
+
+#testimonials figure {
+	padding: 1em 0;
+}
+
+#testimonials blockquote p:first-of-type::before {
+	content: '"';
+}
+
+#testimonials blockquote p:last-of-type::after {
+	content: '"';
+}
+
+#testimonials blockquote p:last-of-type {
+	margin-bottom: 0.5em;
+}
+
+#testimonials cite {
+	font-weight: 400;
+}
+
+#testimonials cite::before {
+	content: "- ";
+}
+
+/* Images section */
+
+#flight_options_images {
+	clear: both;
+}
+
+/* Images wrapper */
+
+#images_wrap {
+	text-align: center;
+}
+
+#flight_options_images figure {
+	padding: 1em;
+	display: inline-block;
+	text-align: left;
+}
+
+#flight_options_images img {
+	height: 250px;
+	width: 360px;
+	object-fit: cover;
+}
+
+#flight_options_images figcaption {
+	font-size: .9em;
+	display: flex;
+	justify-content: right;
+}
+
+/* figcaption columns */
+
+#flight_options_images figcaption span {
+	width: 50%;
+}
+#flight_options_images figcaption span:nth-child(1) {
+	padding-left: .1em;
+}
+
+#flight_options_images figcaption span:nth-child(2) {
+	text-align: right;
+	padding-right: .1em;
+	font-size: 0.85em;
+}
+
+/* Pricing table */
+
+.pricing {
+	font-size: 0.9em;
+}
+
+.pricing:first-of-type {
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+.pricing col {
+	width: 12.5%;
+}
+
+.pricing,
+.pricing th,
+.pricing td {
+	border: 1px solid black;
+	padding: .75em;
+}
+
+.pricing th, 
+.pricing td {
+	text-align: center;
+}
+
+.pricing th {
+	background-color: #A3A3A3;
+}
+
+.pricing td {
+	background-color: #EAEAEA;
+}
+
+/* Page specific - html id="#page_enquire" - enquire.php */
+/* Page specific - html id="#page_payment" - payment.php */
+/* Page specific - html id="#page_fix_order" - fix_order.php */
+/* Page specific - html id="#page_receipt" - receipt.php */
+
+/* Keep all content at max-wdith 650px and center */
+
+#page_enquire article > *,
+#page_payment article > *,
+#page_fix_order article > *,
+#page_receipt article > * {
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+fieldset {
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 1.5em 1.5em 2em;
+	margin-bottom: 1.5em;
+}
+
+form p {
+	margin-bottom: 2em;
+}
+
+.half_paragraphs p {
+	display: inline-block;
+	width: 50%;
+}
+
+fieldset p:last-child,
+.half_paragraphs p:nth-last-child(2) {
+	margin-bottom: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+	width: 90%;
+	padding: .5em;
+	border: 1px solid black;
+	border-radius: 5px;
+	display: block;
+	margin-top: 0.5em;
+}
+
+select {
+	background-color: transparent;
+}
+
+#state,
+#postcode {
+	width: 45%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin-right: 0.5em;
+	vertical-align: top;
+}
+
+p.radio_or_checkbox {
+	margin-bottom: 0.75em;
+}
+
+#tickets {
+	width: 22.5%;
+}
+
+#page_enquire #option {
+	width: 45%;
+}
+
+textarea {
+	height: 150px;
+	width: 100%;
+	resize: none;
+}
+
+input[type="submit"],
+input[type="reset"] {
+	background-color: transparent;
+	color: black;
+	border: 1px solid black;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+	color: white;
+	background-color: black;
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+	background-color: grey;
+}
+
+#od_price {
+	width: 100%;
+	text-align: initial;
+}
+
+#origin_destination_pricing {
+	display: none;
+}
+
+#summary col:first-child {
+	width: 1%;
+}
+
+#summary th,
+#summary td {
+	border: 1px solid black;
+	padding: 0.25em 0.5em;
+	text-align: left;
+}
+
+#summary tr > th:first-child {
+	white-space: nowrap;
+}
+
+#total tr > th:first-child,
+#total tr > td:first-child {
+	text-align: center;
+}
+
+#total th,
+#total td {
+	border: 1px solid black;
+	padding: 0.25em 1em;
+	text-align: left;
+}
+
+#total tr:last-child th {
+	text-align: right;
+}
+
+#total tr:last-child td {
+	font-weight: bold;
+}
+
+/* Page specific - html id="#page_fix_order" - fix_order.php */
+
+#page_fix_order ul {
+	list-style-position: inside;
+	padding-left: 1em;
+}
+
+#page_fix_order #selections p {
+	margin-bottom: 0.5em;
+}
+
+#page_fix_order #selections label,
+#page_fix_order #selections span,
+#page_fix_order #selections p.label {
+	display: inline-block;
+	width: 20%;
+}
+
+#page_fix_order #selections input[type="text"],
+#page_fix_order #selections input[type="email"],
+#page_fix_order #selections input[type="date"],
+#page_fix_order #selections select,
+#page_fix_order #selections textarea,
+#page_fix_order #selections .radios_or_checkboxes {
+	display: inline-block; 
+	width: 78%;
+	margin-top: 0;
+}
+
+#page_fix_order #selections .radios_or_checkboxes label {
+	width: auto;
+	margin-left: 1em;
+}
+
+#page_fix_order #selections textarea {
+	vertical-align: top;
+	height: auto;
+}
+
+/* Page specific - html id="#page_about" - about.php */
+
+/* Definition list */
+
+#page_about dl {
+	width: 100%;
+}
+
+#page_about dt,
+#page_about dd {
+	display: inline-block;
+}
+
+#page_about dt {
+	width: 15%;
+}
+
+#page_about dd {
+	width: 85%;
+}
+
+/* My photo */
+
+#page_about figure {
+	float: right;
+	width: 350px;
+	border: 5px double #625ba6;
+	border-radius: 10px;
+	margin: 0 0 1em 2em;
+	padding: 20px;
+}
+
+#page_about figcaption {
+	font-size: 0.8em;
+	text-align: center;
+	padding: .5em 1em 0 1em;
+	width: 100%;
+}
+
+#me {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* My timetable */
+
+#timetable {
+	width: 95%;
+	margin: 0 auto;
+	text-align: center;
+	table-layout: fixed;
+	font-size: 0.9em;
+}
+
+#timetable,
+#timetable th,
+#timetable td {
+	border: 1px solid #000;
+	padding: 0.25em;
+}
+
+#timetable th {
+	font-weight: bold;
+}
+
+.tne10006 {
+	background-color: #ffd269;
+}
+
+.cos10011 {
+	background-color: #ff99e4;
+}
+
+.cos10009 {
+	background-color: #99a8ff;
+}
+
+.cos10003 {
+	background-color: #36ff90;
+}
+
+#timetable caption {
+	text-align: center;
+}
+
+/* Page specific - html id="#page_manager" - manager.php */
+/* Page specific - html id="#page_authenticate" - authenticate.php */
+/* Page specific - html id="#page_password_change" - password_change.php */
+
+#page_manager #selections .single_button p,
+form.search p,
+form.authenticate p {
+	margin-bottom: 1.5em;
+}
+
+form.search fieldset,
+form.authenticate fieldset {
+	display: inline-block;
+	margin-bottom: 1.5em;
+}
+
+form.search fieldset label,
+form.authenticate fieldset label {
+	display: inline-block;
+	width: 6em;
+}
+form#change_password label {
+	width: 11.5em;
+}
+
+form.search p:last-child,
+form.authenticate p:last-child {
+	margin-bottom: 0;
+}
+
+form.search fieldset input[type="text"],
+form.authenticate fieldset input[type="text"],
+form.authenticate fieldset input[type="password"],
+form.search select {
+	display: initial;
+	width: auto;
+	margin-top: 0;
+}
+
+form.search input[type="submit"],
+form.authenticate input[type="submit"] {
+	width: 100%;
+}
+
+/* Page specific - html id="#page_manager" - manager.php */
+
+#page_manager article {
+	position: relative;
+}
+
+#page_manager #password_change {
+	position: absolute;
+	top: 4em;
+	right: 9.5em;
+}
+
+#page_manager #logout {
+	position: absolute;
+	top: 4em;
+	right: 4em;
+}
+
+#page_manager table {
+	font-size: 0.8em;
+	text-align: center;
+}
+
+#page_manager table,
+#page_manager th,
+#page_manager td {
+	border: 1px solid #000;
+	padding: 0.1em;
+}
+
+
+#page_manager table input {
+	font-size: inherit;
+	padding: 0.1em 0.2em;
+}
+
+#page_manager table select {
+	padding: 0;
+	font-size: inherit;
+	width: initial;
+	display: initial;
+	margin: 0 0.2em 0.2em 0.2em;
+}
+
+/* Page specific - html id="#page_enhancements" - enhancements.php */
+
+/* Code snippet containers */
+
+.code {
+	position: relative;
+	padding-top: 2em;
+	border-radius: 10px;
+	color: gold;
+	background-color: #000;
+	font-family: monospace;
+	margin-bottom: 1em;
+	overflow: hidden;
+}
+
+.code::before {
+	content: attr(data-lang);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	line-height: 2em;
+	padding-right: 10px;
+	text-align: right;
+	background-image: linear-gradient(to right, #fb6262, #633fc6);
+	color: white
+}
+
+pre {
+	overflow-x: scroll;
+}
+
+code {
+	display: inline-block;
+	padding: 2em;
+	font-size: 1.1em;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 980px) {
+
+	/* Article */
+
+	article {
+		border-radius: 0;
+		padding: 6%
+	}
+
+	/* Nav */
+ 
+	#nav_container {
+		position: relative;
+	}
+
+	#navicon {
+		display: block;
+		position: relative;
+		height: 31px;
+		width: 40px;
+	}
+
+	#navicon::before {
+		content: '';
+		top: 0px;
+	}
+
+	#navicon span {
+		top: 12px;
+	}
+
+	#navicon::after {
+		content: '';
+		top: 24px;
+	}
+
+	#navicon span,
+	#navicon::before,
+	#navicon::after {
+		position: absolute;
+		left: 0;
+		height: 4px;
+		width: 100%;
+		background-color: #FFF;
+		border-radius: 5px;
+	}
+
+	nav {
+		display: none;
+		position: absolute;
+		top: 31px;
+		right: 0;
+		padding: 0.5em;
+		background-color: #FFF;
+		border: 1px solid black;
+		border-radius: 10px;
+		text-align: center;
+		box-shadow: 0px 0px 5px #666666;
+	}
+
+	#nav_container:hover nav {
+		display: block;
+	}
+
+	nav a {
+		display: block;
+		color: black;
+		margin-right: 0;
+		margin-bottom: 0.5em;
+	}
+
+	nav a:last-child {
+		margin-bottom: 0;
+	}
+
+	nav a.current {
+	border-color: black;
+	}
+
+	nav a:hover {
+	color: white;
+	background-color: black;
+}
+
+	/* Footer */
+
+	footer {
+		display: block;
+	}
+
+	footer div.footer_col {
+		width: auto;
+		font-size: .8em;
+		text-align: center !important;
+	}
+
+	/* Page specific - html id="#page_home" - index.php */
+
+	h1.splash_text {
+		font-size: 5em;
+	}
+
+	span.splash_text {
+		font-size: 1.3em;
+	}
+
+	/* Page specific - html id="#page_product" - product.php */
+
+	.pricing th,
+	.pricing td {
+		padding-left: .25em;
+		padding-right: .25em;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+
+	/* Page specific - html id="#page_home" - index.php */
+
+	h1.splash_text {
+		font-size: 4em;
+	}
+
+	span.splash_text {
+		font-size: 1.1em;
+	}
+
+	/* Page specific - html id="#page_product" - product.php */
+
+	#testimonials {
+		float: none;
+		width: 66.66%;
+		margin: 0 auto 2em;
+	}
+
+	.pricing th,
+	.pricing td {
+		padding-left: .1em;
+		padding-right: .1em;
+	}
+
+	.pricing {
+		font-size: .7em;
+	}
+
+	/* Page specific - html id="#page_enquire" - enquire.php */
+
+	#state {
+		width: 65%;
+	}
+
+
+	/* Page specific - html id="#page_about" - about.php */
+	
+	#page_about dt {
+		width: 25%;
+	}
+
+	#page_about dd {
+		width: 75%;
+	}
+
+	#page_about figure {
+		float: none;
+		width: 75%;
+		margin: 0 auto 2em;
+	}
+
+	#timetable {
+		font-size: .8em;
+	}
+}
+
+/* New break point for Assignment Part 2 */
+@media screen and (max-width: 520px) {
+
+	/* Page specific - html id="#page_product" - product.php */
+
+	.pricing {
+		font-size: .6em;
+	}
+
+}
+
+@media screen and (max-width: 479px) {
+
+	/* Page specific - html id="#page_home" - index.php */
+
+	h1.splash_text {
+		font-size: 3em;
+	}
+
+	span.splash_text {
+		font-size: 1em;
+	}
+
+	/* Page specific - html id="#page_product" - product.php */
+
+	#flight_options_images img {
+		height: auto;
+		width: 100%;
+	}
+
+	.pricing {
+		font-size: .5em;
+	}
+
+	/* Page specific - html id="#page_enquire" - enquire.php */
+	/* Page specific - html id="#page_payment" - payment.php */
+	
+	#state {
+		width: 90%;
+	}
+	
+	#total th,
+	#total td {
+		padding-left: .25em;
+		padding-right: .25em;
+	}
+
+	/* Page specific - html id="#page_about" - about.php */
+
+	#page_about figure {
+		width: 100%;
+	}
+
+	#timetable {
+		font-size: .6em;
+	}
+}
+
+@media screen and (max-height: 550px) and (orientation:landscape) {
+
+	/* Page specific - html id="#page_home" - index.php */
+
+	#page_home main {
+		padding-top: 2.5em;
+	}
+}
+
+@media screen and (max-height: 450px) and (orientation:landscape) {
+
+	/* Page specific - html id="#page_home" - index.php */
+
+	#page_home main {
+		padding-top: 1.5em;
+	}
+
+	h1.splash_text {
+		font-size: 3em;
+	}
+
+	span.splash_text {
+		font-size: 1em;
+	}
+}
